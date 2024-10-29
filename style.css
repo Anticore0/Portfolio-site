@@ -41,16 +41,16 @@ body {
     content: url("images/dots.png");
     position: absolute;
     top: -27px;
-    left: 50%;
+    left: 70%;
     width: 74px;
     height: 54px;
-    transform: translate(313px, 0);
 }
 
 .container {
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .container_big {
@@ -110,8 +110,33 @@ h3 {
     text-decoration: none;
 }
 
-.navigation a:hover{
+.navigation a:hover {
     text-decoration: underline;
+}
+
+.toggler__button {
+    display: none;
+    height: 64px;
+    width: 64px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #eeeeee00;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.toggler__button:hover span {
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+.toggler__button span {
+    height: 5px;
+    width: 100%;
+    background-color: rgb(150, 150, 150);
+    border-radius: 5px;
 }
 
 .portfolio-grid {
@@ -124,38 +149,59 @@ h3 {
     gap: 24px;
     grid-auto-flow: row;
     grid-template-areas:
-      "big small small"
-      "big big2 small2"
-      "small3 big2 big3"
-      "small4 small4 big3";
+        "big small small"
+        "big big2 small2"
+        "small3 big2 big3"
+        "small4 small4 big3";
 }
 
-.big { grid-area: big; }
+.big {
+    grid-area: big;
+}
 
-.small { grid-area: small; }
+.small {
+    grid-area: small;
+}
 
-.small, .small4 {
+.small,
+.small4 {
     display: flex;
     gap: 24px;
 }
 
-.big2 { grid-area: big2; }
+.big2 {
+    grid-area: big2;
+}
 
-.small2 { grid-area: small2; }
+.small2 {
+    grid-area: small2;
+}
 
-.big3 { grid-area: big3; }
+.big3 {
+    grid-area: big3;
+}
 
-.small3 { grid-area: small3; }
+.small3 {
+    grid-area: small3;
+}
 
-.small4 { grid-area: small4; }
+.small4 {
+    grid-area: small4;
+}
 
-.big, .big2, .big3 {
+.big,
+.big2,
+.big3 {
     height: 584px;
 }
 
-.small, .small2, .small3, .small4 {
+.small,
+.small2,
+.small3,
+.small4 {
     height: 280px;
 }
+
 .card img {
     object-fit: cover;
     width: 100%;
@@ -184,6 +230,8 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 200px;
 }
 
 .clients-logo img {
@@ -208,18 +256,20 @@ h3 {
     background-color: white;
     margin: 0 auto;
     border-radius: 7px;
+    padding: 0 20px;
 }
 
-.form_text {   
+.form_text {
     text-align: center;
     padding-top: 50px;
 }
 
-.contact_form_fieldset { 
+.contact_form_fieldset {
     font-family: "playfair display";
     font-size: 22px;
     border: none;
     margin: 0;
+    padding: 0;
 }
 
 .ui_input {
@@ -254,7 +304,8 @@ h3 {
     font-size: 15px;
 }
 
-.contact_form input, .contact_form textarea {
+.contact_form input,
+.contact_form textarea {
     width: 100%;
 }
 
@@ -266,7 +317,8 @@ h3 {
 
 .form_submit_button {
     align-self: center;
-    width: 356px;
+    width: 100%;
+    max-width: 356px;
     height: 59px;
     font-family: "playfair display";
     text-transform: uppercase;
@@ -287,7 +339,7 @@ h3 {
 
 .footer-contacts {
     display: grid;
-    grid-template-columns: 235px 175px 280px;
+    grid-template-columns: repeat(3, auto);
     justify-content: space-between;
     gap: 20px;
 }
@@ -317,4 +369,139 @@ h3 {
     font-size: 15px;
     color: #7a7a7a;
     border-top: 0.5px solid #363636;
+}
+
+@media (max-width: 992px) {
+    .footer-contacts {
+        grid-template-columns: repeat(1, auto);
+        justify-content: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "big small"
+            "big small"
+            "small2 big2"
+            "small3 big2"
+            "big3 small4"
+            "big3 small4";
+    }
+
+    .big,
+    .big1,
+    .big2,
+    .big3 {
+        height: 71vw;
+        flex-direction: column;
+    }
+
+    .small,
+    .small4,
+    .small2,
+    .small3 {
+        flex-direction: column;
+        height: 34vw;
+    }
+
+    .small4 {
+        height: 71vw;
+    }
+
+    .small4 .card {
+        height: 50%;
+    }
+
+    .clients__box {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 45px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 55px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .header .navigation {
+        display: none;
+    }
+
+    .toggler__button {
+        display: flex
+    }
+
+    .header::after {
+        display: none;
+    }
+
+    .header::before {
+        display: none;
+    }
+
+    #portfolio {
+        padding-bottom: 40px;
+    }
+
+    .clients {
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    #portfolio .navigation {
+        padding-top: 70px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .small,
+    .small4,
+    .small2,
+    .small3,
+    .big,
+    .big1,
+    .big2,
+    .big3 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact_form_name_email_wrap {
+        display: flex; 
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
 }
