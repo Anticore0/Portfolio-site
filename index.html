@@ -20,15 +20,15 @@
             <nav class="header-navigation">
                 <img class="logo-brand" src="images/logo.png" draggable="false" />
                 <ul class="navigation" id="menuNav">
-                    <li><b>Home</b></li>
+                    <li><a href="#"><b>Home</b></a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <div class="burger-menu" id="burgerBtn">
+                <button class="burger-menu" id="burgerBtn">
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
         <div class="container">
@@ -38,52 +38,117 @@
     <main>
         <section id="portfolio">
             <div class="container">
-                <ul class="navigation navigation-portfolio">
-                    <li><b>All</b></li>
-                    <li>UI/UX Design</li>
-                    <li>BRANDING</li>
-                    <li>ILLUSTRATION</li>
+                <ul class="navigation navigation-portfolio" id="navTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-target="tab1">All</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-target="tab2">UI/UX Design</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-target="tab3">BRANDING</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-target="tab4">ILLUSTRATION</button>
+                    </li>
                 </ul>
-                <div class="portfolio-grid">
-                    <div class="big">
-                        <div class="card">
-                            <img src="images/mem1.png" />
+                <div class="tab-content" id="navPanes">
+                    <div class="tab-pane active" id="tab1">
+                        <div class="portfolio-grid">
+                            <div class="big">
+                                <div class="card">
+                                    <img src="images/mem1.png" />
+                                </div>
+                            </div>
+                            <div class="small">
+                                <div class="card">
+                                    <img src="images/mem2.png" />
+                                </div>
+                                <div class="card">
+                                    <img src="images/mem4.png" />
+                                </div>
+                            </div>
+                            <div class="big2">
+                                <div class="card">
+                                    <img src="images/mem9.jpg" />
+                                </div>
+                            </div>
+                            <div class="small2">
+                                <div class="card">
+                                    <img src="images/mem5.png" />
+                                </div>
+                            </div>
+                            <div class="big3">
+                                <div class="card">
+                                    <img src="images/mem8.png" />
+                                </div>
+                            </div>
+                            <div class="small3">
+                                <div class="card">
+                                    <img src="images/mem6.png" />
+                                </div>
+                            </div>
+                            <div class="small4">
+                                <div class="card">
+                                    <img src="images/mem7.png" />
+                                </div>
+                                <div class="card">
+                                    <img src="./images/mem3.png" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="small">
-                        <div class="card">
-                            <img src="images/mem2.png" />
-                        </div>
-                        <div class="card">
-                            <img src="images/mem4.png" />
-                        </div>
-                    </div>
-                    <div class="big2">
-                        <div class="card">
-                            <img src="images/mem9.jpg" />
-                        </div>
-                    </div>
-                    <div class="small2">
-                        <div class="card">
-                            <img src="images/mem5.png" />
-                        </div>
-                    </div>
-                    <div class="big3">
-                        <div class="card">
-                            <img src="images/mem8.png" />
+                    <div class="tab-pane" id="tab2">
+                        <div class="portfolio-grid">
+                            <div class="small">
+                                <div class="card">
+                                    <img src="images/mem2.png" />
+                                </div>
+                                <div class="card">
+                                    <img src="images/mem4.png" />
+                                </div>
+                            </div>
+                            <div class="small2">
+                                <div class="card">
+                                    <img src="images/mem5.png" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="small3">
-                        <div class="card">
-                            <img src="images/mem6.png" />
+                    <div class="tab-pane" id="tab3">
+                        <div class="portfolio-grid">
+                            <div class="big">
+                                <div class="card">
+                                    <img src="images/mem1.png" />
+                                </div>
+                            </div>
+                            <div class="big2">
+                                <div class="card">
+                                    <img src="images/mem9.jpg" />
+                                </div>
+                            </div>
+                            <div class="big3">
+                                <div class="card">
+                                    <img src="images/mem8.png" />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="small4">
-                        <div class="card">
-                            <img src="images/mem7.png" />
-                        </div>
-                        <div class="card">
-                            <img src="./images/mem3.png" />
+                    <div class="tab-pane" id="tab4">
+                        <div class="portfolio-grid">
+                            <div class="small3">
+                                <div class="card">
+                                    <img src="images/mem6.png" />
+                                </div>
+                            </div>
+                            <div class="small4">
+                                <div class="card">
+                                    <img src="images/mem7.png" />
+                                </div>
+                                <div class="card">
+                                    <img src="./images/mem3.png" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
