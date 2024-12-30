@@ -184,13 +184,13 @@ h3 {
 }
 
 #tab4 .portfolio-grid {
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px; 
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
     gap: 24px;
-    grid-template-areas: 
-      "small3 small4 small4"; 
+    grid-template-areas:
+        "small3 small4 small4";
 }
 
 .portfolio-grid {
