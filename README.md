@@ -1,12 +1,13 @@
-# Portfolio
-This is a learning project created to practice web development skills using HTML, CSS, and JavaScript. The goal was to build a responsive and interactive portfolio from scratch.
+# Portfolio-site
+This project is a small-scale website built to demonstrate web development skills with HTML, CSS, and JavaScript. It focuses on creating a responsive.
 
-## Technologies
-HTML – structure and content of the site.
+## Technologies Used:
 
-CSS – styling, layout, and responsiveness.
+- HTML: Site structure and content.
 
-JavaScript – for adding interactivity and dynamic elements.
+- CSS: Styling, layout, and responsive design.
 
-## Accessibility
-The site is available at: https://anticore0.github.io/Portfolio-site/
+- JavaScript: Interactivity and dynamic elements.
+
+## Live Website:
+Visit here: https://anticore0.github.io/Portfolio-site
